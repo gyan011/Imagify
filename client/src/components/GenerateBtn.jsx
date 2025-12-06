@@ -1,7 +1,9 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { useNavigate } from 'react-router-dom'
 
 const GenerateBtn = () => {
+    const navigate = useNavigate()
     return (
         <div className='pb-16 text-center'>
             <h1 className='text-2xl md:text-3xl lg:text-4xl
@@ -12,6 +14,7 @@ const GenerateBtn = () => {
             <button className='inline-flex items-center gap-2 px-12
                 py-3 rounded-full bg-black text-white m-auto hover:scale-105
                 transition-all duration-500'
+                onClick={() => navigate('/result')}
             >
                 Generate Images
                 <img src={assets.star_group} alt="" className='h-6'/>

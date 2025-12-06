@@ -1,8 +1,10 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import { motion } from "framer-motion"
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
+    const navigate = useNavigate();
     return (
         <motion.div className='flex flex-col justify-center items-center text-center my-20'
             initial = {{opacity:0.2, y:100}}
@@ -46,6 +48,7 @@ const Header = () => {
                 initial={{opacity:0}}
                 animate={{opacity:1}}
                 transition={{default:{duration:0.5}, opacity: {delay:0.8, duration:1}}}
+                onClick={() => navigate('/result')} 
             >
                 Generate Images
                 <img className='h-6' src={assets.star_group} alt="" />

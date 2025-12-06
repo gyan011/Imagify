@@ -37,9 +37,7 @@ const Description = () => {
                         something you can actually see.
                     </p>
                 </div>
-
             </div>
-
         </div>
     )
 }

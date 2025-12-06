@@ -12,7 +12,7 @@ dotenv.config();
 app.use(cors({
   origin: "http://localhost:5173",
   credentials: true,
-  allowedHeaders: ["Content-Type", "Authorization", "token"], // ✅
+  allowedHeaders: ["Content-Type", "Authorization", "token"], 
 }));
 
 const PORT = process.env.PORT || 4000;

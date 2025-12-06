@@ -75,7 +75,8 @@ export const loginUser = async (req, res) => {
         res.status(200).json({
             success: true,
             message: "Login successful!",
-            token
+            token,
+            user
         })
     } catch (error) {
         console.log(error.message)
@@ -95,6 +96,7 @@ export const userCredits = async (req, res) => {
         res.status(200).json({
             success: true,
             credits: user.creditBalance, 
+            user
         })
     } catch (error) {
         console.log(error.message)
